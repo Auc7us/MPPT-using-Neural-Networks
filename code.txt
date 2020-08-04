@@ -1,0 +1,6 @@
+D = out.data(:,2);
+P = out.data(:,3);
+poly = polyfit(D,P,4);
+der = polyder(poly);
+Dres = min(roots(der));
+maximum_power = polyval(poly,Dres);
